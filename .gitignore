@@ -1,0 +1,22 @@
+# Build folders
+build/
+CMakeFiles/
+CMakeCache.txt
+cmake_install.cmake
+Makefile
+
+# Binaries
+*.exe
+*.obj
+*.o
+*.pdb
+*.dll
+*.so
+*.dylib
+
+# Logs
+*.log
+
+# Backup / temp files
+*~
+*.tmp

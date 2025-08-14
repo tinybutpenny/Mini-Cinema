@@ -1,0 +1,17 @@
+#include "nhap.h"
+#include "chung.h"
+#include "xuat.h"
+
+int main() {
+    char tieptuc;
+    do {
+        inphim();
+        // inmenu();
+        // nhap();
+        std::cout << " Bạn có muốn đặt tiếp không (y/n)" << std::endl;
+        tieptuc = chonthoat();
+    } while (tieptuc == 'y');
+    std::cout << " Tạm biệt" "\n" 
+    " Hẹn gặp lại" << std::endl;
+    return 0;
+}
