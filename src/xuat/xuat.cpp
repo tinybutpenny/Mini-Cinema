@@ -1,4 +1,5 @@
 #include "xuat.h"
+
 int tongtien = 0;
 // kiểm tra số lượng
 bool kiemtrasoluong(int soluong) {
@@ -182,5 +183,7 @@ void inmenu() {
 }
 // in ra hóa đơn tiền
 void inhoadon() {
-
+    if (phim == "p1" || phim == "p2" || phim == "p3") {
+        
+    }
 }

@@ -3,7 +3,6 @@
 #include "nhap.h"
 
 bool kiemtrasoluong(int soluong);
-float tinhtien(float a);
 float tienghe();
 float tiendoan();
 float tiendouong();
