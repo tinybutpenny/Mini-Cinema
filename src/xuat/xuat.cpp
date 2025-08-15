@@ -120,28 +120,57 @@ float tiendoan() {
         sotien += soluongf1 * 3.4;
     }
     if (kiemtrasoluong(soluongf2)) {
-        sotien += soluongf1 * 2.7;
+        sotien += soluongf2 * 2.7;
     }
     if (kiemtrasoluong(soluongf3)) {
-        sotien += soluongf1 * 3;
+        sotien += soluongf3 * 3;
     }
     if (kiemtrasoluong(soluongf4)) {
-        sotien += soluongf1 * 4.6;
+        sotien += soluongf4 * 4.6;
     }
 }
 // tính tiền đồ uống
 float tiendouong() {
+    float sotien = 0;
+    if (kiemtrasoluong(soluongd1)) {
+        sotien += soluongd1 * 4.4;
+    }
+    if (kiemtrasoluong(soluongd2)) {
+        sotien += soluongd2 * 3.6;
+    }
+    if (kiemtrasoluong(soluongd3)) {
+        sotien += soluongd3 * 5;
+    }
+    if (kiemtrasoluong(soluongd4)) {
+        sotien += soluongd4 * 2.6;
+    }
+    if (kiemtrasoluong(soluongd5)) {
+        sotien += soluongd5 * 9;
+    }
 
 }
 // tính tiền combo
 float tiencombo() {
-
+    float sotien = 0;
+    if (kiemtrasoluong(soluongc1)) {
+        sotien += soluongf1 * 4.9;
+    }
+    if (kiemtrasoluong(soluongc2)) {
+        sotien += soluongf1 * 9.6;
+    }
+    if (kiemtrasoluong(soluongc3)) {
+        sotien += soluongf1 * 10.5;
+    }
+    if (kiemtrasoluong(soluongc4)) {
+        sotien += soluongf1 * 14.8;
+    }
 }
 // tính tổng số tiền 
 float tongtienhoadon() {
     float tongtien = 0;
     tongtien += tienghe();
     tongtien += tiendoan();
+    tongtien += tiencombo();
 }
 // in menu
 void inmenu() {

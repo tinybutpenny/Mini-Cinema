@@ -218,6 +218,6 @@ void incombo() {
     << " Tên combo:"  << "\t" "\t"  << " Combo 1"        << "\t" "\t" << " Combo 2"             << "\t" "\t" << " Combo Couple"     << "\t" "\t" << " Combo VIP"                    << "\n"
     << " Mã combo:"   << "\t" "\t"  << " C1" "\t"        << "\t" "\t" << " C2" "\t"             << "\t" "\t" << " C3" "\t"          << "\t" "\t" << " C4"                            << "\n"
     << " Gồm:" "\t"   << "\t" "\t"  << " Bắp mặn + Coca" << "\t" "\t" << " Bắp ngọt + Pepsi"    << "\t"      << " Bắp mix + 2 Coca" << "\t"      << " Bắp phô mai + Trà sữa + Voka" << "\n"
-    << " Giá combo:"  << "\t" "\t"  << " 4.9$" "\t"      << "\t" "\t" << " 3.6$"      "\t"      << "\t" "\t" << " 10.5$"  "\t"      << "\t" "\t" << " 14.8$"                        << "\n"
+    << " Giá combo:"  << "\t" "\t"  << " 4.9$" "\t"      << "\t" "\t" << " 9.6$"      "\t"      << "\t" "\t" << " 10.5$"  "\t"      << "\t" "\t" << " 14.8$"                        << "\n"
     << std::endl;
 }
