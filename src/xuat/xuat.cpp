@@ -172,6 +172,7 @@ float tongtienhoadon() {
     tongtien += tienghe();
     tongtien += tiendoan();
     tongtien += tiencombo();
+    return tongtien;
 }
 // in menu
 void inmenu() {
@@ -183,7 +184,5 @@ void inmenu() {
 }
 // in ra hóa đơn tiền
 void inhoadon() {
-    if (phim == "p1" || phim == "p2" || phim == "p3") {
-        
-    }
+    
 }

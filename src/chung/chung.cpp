@@ -2,6 +2,9 @@
 
 std::string ten;
 std::string phim;
+std::string ghedachonthuong;
+std::string ghedachonvip;
+std::string ghedachodoi;
 std::string ghedangco = " AA AB AC AD AE AF AG AH AI AJ BA BB BC BD BE BF BG BH BI BJ CA CB CC CD CE CF CG CH CI CJ DA DB DC DD DE DF DG DH DI DJ EA EB EC ED EE EF EG EH EI EJ FA FB FC FD FE FF FG FH FI FJ GA GB GC GD GE GF GG GH GI GJ HA HB HC HD HE HF HG HH HI HJ IA IB IC ID IE IF IG IH II IJ JA JB JC JD JE";
 std::string ghedoi = " JA JB JC JD JE JF JG JH JI JJ ";
 std::string ghevip = " CC CD CE CF CG CH DC DD DE DF DG DH EC ED EE EF EG EH FC FD FE FF FG FH GC GD GE GF GG GH HC HD HE HF HG HH ";

@@ -185,30 +185,40 @@ void nhapghe() {
             std::cout << " Ghế của bạn đã được chọn rồi\n" " Vui lòng chọn ghế khác" << std::endl;
             continue;
         } else {
+            std::string fomat = " "  + ghe + " ";
             if (phim == "P1") {
                 if (gio == "7h") {
-                    ghep1_7h += " " + ghe + " ";
+                    ghep1_7h += fomat;
                 } else if (gio == "14h") {
-                    ghep1_14h += " " + ghe + " ";
+                    ghep1_14h += fomat;
                 } else {
-                    ghep1_22h += " " + ghe + " ";
+                    ghep1_22h += fomat;
                 }   
             } else if (phim == "P2") {
                 if (gio == "10h") {
-                    ghep2_10h += " " + ghe + " ";
+                    ghep2_10h += fomat;
                 } else if (gio == "12h") {
-                    ghep2_12h += " " + ghe + " ";
+                    ghep2_12h += fomat;
                 } else {
-                    ghep2_14h += " " + ghe + " ";
+                    ghep2_14h += fomat;
                 }  
             } else {
                 if (gio == "20h") {
-                    ghep3_20h += " " + ghe + " ";
+                    ghep3_20h += fomat;
                 } else if (gio == "23h") {
-                    ghep3_23h += " " + ghe + " ";
+                    ghep3_23h += fomat;
                 } else {
-                    ghep3_1h += " " + ghe + " ";
+                    ghep3_1h += fomat;
                 }
+            }
+            if (ghethuong.find(fomat) != std::string::npos) {
+                ghedachonthuong += fomat;
+            }
+            if (ghevip.find(fomat) != std::string::npos) {
+                ghedachonvip += fomat;
+            }
+            if (ghedoi.find(fomat) != std::string::npos) {
+                ghedachondoi += fomat;
             }
         }
         std::cout << " Bạn có muốn chọn thêm ghế không y/n" << std::endl;
