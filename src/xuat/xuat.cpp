@@ -202,6 +202,12 @@ void p() {
     }
 
 }
+// in đồ ăn
+void doan() {
+    if (!kiemtrasoluong(soluongf1)) {
+        
+    }
+}
 // in ra hóa đơn tiền
 void inhoadon() {
     std::cout << "Phim bạn đã chọn là:\n";
