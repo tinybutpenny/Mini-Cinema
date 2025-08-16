@@ -184,5 +184,15 @@ void inmenu() {
 }
 // in ra hóa đơn tiền
 void inhoadon() {
-    
+    std::cout << " Phim bạn đã chọn là:" << std::endl;
+    if (phim == "p1") {
+        
+        if (gio == "7h") {
+            std::cout << " "
+        }
+    }
+    if (phim == "p2") {
+
+    }
+
 }

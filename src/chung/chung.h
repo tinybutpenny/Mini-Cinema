@@ -15,10 +15,10 @@
 
 extern std::string ten; 
 extern std::string phim;
-extern std::string ghedangco;
 extern std::string ghedachonthuong;
 extern std::string ghedachonvip;
 extern std::string ghedachondoi;
+extern std::string ghedangco;
 extern std::string ghedoi;
 extern std::string ghethuong;
 extern std::string ghevip;
