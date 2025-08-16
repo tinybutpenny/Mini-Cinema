@@ -182,17 +182,42 @@ void inmenu() {
     indouong();
     incombo();
 }
-// in ra hóa đơn tiền
-void inhoadon() {
-    std::cout << " Phim bạn đã chọn là:" << std::endl;
-    if (phim == "p1") {
-        
-        if (gio == "7h") {
-            std::cout << " "
-        }
+// in phim 
+void p() {
+    std::cout << " Các ghế là:" << std::endl;
+    if (soluongghethuong !=0) {
+        std::cout << "Ghế thường:\n"
+        << "Số ghế là: " << soluongghethuong << '\n'
+        << "Các ghế là: " << ghedachonthuong << '\n';
     }
-    if (phim == "p2") {
-
+    if (soluongghevip != 0) {
+        std::cout << "Ghế Vip:\n"
+        << "Số ghế là: " << soluongghevip << '\n'
+        << "Các ghế là: " << ghedachonvip << '\n';
+    }
+    if (soluongghedoi != 0) {
+        std::cout << "Ghế Đôi:\n"
+        << "Số ghế là: " << soluongghedoi << '\n'
+        << "Các ghế là: " << ghedachondoi << '\n';
     }
 
 }
+// in ra hóa đơn tiền
+void inhoadon() {
+    std::cout << "Phim bạn đã chọn là:\n";
+
+    if (phim == "p1") {
+        std::cout << "Taylor Swift Era\n";
+        std::cout << "Giờ chiếu là: " << gio << std::endl;
+        p();
+    } else if (phim == "p2") {
+        std::cout << "Avengers\n";
+        std::cout << "Giờ chiếu là: " << gio << std::endl;
+        p();
+    } else if (phim == "p3") {
+        std::cout << "Spiderman\n";
+        std::cout << "Giờ chiếu là: " << gio << std::endl;
+        p();
+    }
+}
+

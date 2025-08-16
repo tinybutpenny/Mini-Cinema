@@ -9,5 +9,6 @@ float tiendouong();
 float tiencombo();
 float tongtienhoadon();
 void inmenu();
+void p();
 void inhoadon();
 
