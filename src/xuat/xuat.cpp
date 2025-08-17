@@ -182,6 +182,50 @@ void inmenu() {
     indouong();
     incombo();
 }
+// hàm in giá tiền ghế 
+int ingiatienghe(char a) {
+    if (phim == "p1") {
+        if (gio == "7h") {
+            if (a == 'T') {
+                return 20;
+            }
+            if (a == 'Đ') {
+                return 30.5;
+            }
+            if (a == 'V') {
+                return 50.9;
+            }   
+        }
+        if (gio == "14h") {
+            if (a == 'T') {
+                return 18;
+            }
+            if (a == 'Đ') {
+                return 48.7;
+            }
+            if (a == 'V') {
+                return 30;
+            }
+        }
+        if (gio == "22h") {
+            if (a == 'T') {
+                return 45.5;
+            }
+            if (a == 'Đ') {
+                return 21;
+            } 
+            if (a == 'V') {
+                return 18;
+            }
+        }
+    }
+    if (phim == "p2") {
+
+    } 
+    if (phim == "p3") {
+        
+    }
+}
 // in phim 
 void p() {
     std::cout << " Các ghế là:" << std::endl;
@@ -202,12 +246,6 @@ void p() {
     }
 
 }
-// in đồ ăn
-void doan() {
-    if (!kiemtrasoluong(soluongf1)) {
-        
-    }
-}
 // in ra hóa đơn tiền
 void inhoadon() {
     std::cout << "Phim bạn đã chọn là:\n";
@@ -225,5 +263,7 @@ void inhoadon() {
         std::cout << "Giờ chiếu là: " << gio << std::endl;
         p();
     }
+    // in hóa đơn đồ ăn 
+    std::cout << " Đồ ăn bạn đã mua là: \n";
 }
 
