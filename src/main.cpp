@@ -5,9 +5,9 @@
 int main() {
     char tieptuc;
     do {
-        inphim();
-        // inmenu();
-        // nhap();
+        inmenu();
+        nhap();
+        inhoadon();
         std::cout << " Bạn có muốn đặt tiếp không (y/n)" << std::endl;
         tieptuc = chonthoat();
     } while (tieptuc == 'y');

@@ -11,4 +11,5 @@ void inmenu();
 float ingiaghe(char a);
 void p();
 void inhoadon();
+void reset();
 
