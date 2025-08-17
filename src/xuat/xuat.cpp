@@ -183,7 +183,7 @@ void inmenu() {
     incombo();
 }
 // hàm in giá tiền ghế 
-int ingiatienghe(char a) {
+float ingiaghe(char a) {
     if (phim == "p1") {
         if (gio == "7h") {
             if (a == 'T') {
@@ -193,7 +193,7 @@ int ingiatienghe(char a) {
                 return 30.5;
             }
             if (a == 'V') {
-                return 50.9;
+                return 50.9f;
             }   
         }
         if (gio == "14h") {
@@ -220,10 +220,76 @@ int ingiatienghe(char a) {
         }
     }
     if (phim == "p2") {
-
+        if (gio == "10h") {
+            if (a == 'T') {
+                return 21;
+            }
+        }
+        if (gio == "12h") {
+            if (a == 'Đ') {
+                return 31.5;
+            }
+            if (a == 'V') {
+                return 52;
+            }
+        } 
+        if (gio == "14h") {
+            if (a == 'T') {
+                return 19;
+            }
+            if (a == ' Đ') {
+                return 49.7;
+            }
+            if (a == 'V') {
+                return 31;
+            }
+        }
+        if (gio == "14h") {
+            if (a == ' T') {
+                return 46.5;
+            }
+            if (a == 'Đ') {
+                return 22;
+            }
+            if (a == 'V') {
+                return 19;
+            }
+        }
     } 
     if (phim == "p3") {
-        
+        if (gio == "20h") {
+            if (a == 'T') {
+                return 22;
+            }
+            if (a == 'Đ') {
+                return 32.5;
+            }
+            if (a == 'V') {
+                return 53;
+            }
+        }
+        if (gio == "23h") {
+            if (a == 'T') {
+                return 20;
+            }
+            if (a == 'Đ') {
+                return 50.7;
+            }
+            if (a == 'V') {
+                return 32;
+            }
+        } 
+        if (gio == "1h") {
+            if (a == 'T') {
+                return 47.5;
+            } 
+            if (a == 'Đ') {
+                return 23;
+            }
+            if (a == 'V') {
+                return 20;
+            }
+        }
     }
 }
 // in phim 
@@ -232,17 +298,20 @@ void p() {
     if (soluongghethuong !=0) {
         std::cout << "Ghế thường:\n"
         << "Số ghế là: " << soluongghethuong << '\n'
-        << "Các ghế là: " << ghedachonthuong << '\n';
+        << "Các ghế là: " << ghedachonthuong << '\n'
+        << " Giá: " << ingiaghe('T') << " $\n";
     }
     if (soluongghevip != 0) {
         std::cout << "Ghế Vip:\n"
         << "Số ghế là: " << soluongghevip << '\n'
-        << "Các ghế là: " << ghedachonvip << '\n';
+        << "Các ghế là: " << ghedachonvip << '\n'
+        << " Giá: " << ingiaghe('V') << " $\n";
     }
     if (soluongghedoi != 0) {
         std::cout << "Ghế Đôi:\n"
         << "Số ghế là: " << soluongghedoi << '\n'
-        << "Các ghế là: " << ghedachondoi << '\n';
+        << "Các ghế là: " << ghedachondoi << '\n'
+        << " Giá: " << ingiaghe('Đ') << " $ \n";
     }
 
 }
@@ -264,6 +333,59 @@ void inhoadon() {
         p();
     }
     // in hóa đơn đồ ăn 
-    std::cout << " Đồ ăn bạn đã mua là: \n";
+    bool kiemtradoan = (soluongf1 > 0 || soluongf2 > 0 || soluongf3 > 0 || soluongf4 > 0);
+    if (kiemtradoan) {
+        std::cout << " Đồ ăn bạn đã chọn là: \n";
+        if (kiemtrasoluong(soluongf1)) {
+            std::cout << " Bắp mặn\n"  
+            << " Đơn giá: 3.4$ \n"
+            << " Số lượng: " << soluongf1 << '\n';
+        }
+        if (kiemtrasoluong(soluongf2)) {
+            std::cout << " Bắp ngọt \n"
+            << " Đơn giá: 2.7$ \n"
+            << " Số lượng: " << soluongf2 << '\n';
+        }
+        if (kiemtrasoluong(soluongf3)) {
+            std::cout << " Bắp phô mai\n" 
+            << " Đơn giá: 3$\n"
+            << " Số lượng: " << soluongf3 << '\n';
+        }
+        if (kiemtrasoluong(soluongf4)) {
+            std::cout << " Bắp mix vị\n"
+            << " Đơn giá: 4.6$\n"  
+            << " Số lượng: " << soluongf4 << '\n';
+        }
+    }
+    // in hóa đơn đồ uống
+    bool kiemtradouong = (soluongd1 > 0 || soluongd2 > 0 || soluongd3 > 0 || soluongd4 > 0 || soluongd5 > 0);
+    if (kiemtradouong) {
+        std::cout << " Đồ uống bạn đã chọn là: \n";
+        if (kiemtrasoluong(soluongd1)) {
+            std::cout << " Coca\n"
+            << " Đơn giá: 4.4$\n"
+            << " Số lượng: " << soluongd1 << '\n';
+        }
+        if (kiemtrasoluong(soluongd2)) {
+            std::cout << " Pepsi\n" 
+            << " Đơn giá: 3.6$\n"
+            << " Số lượng: " << soluongd2 << '\n';
+        } 
+        if (kiemtrasoluong(soluongd3)) {
+            std::cout << " Cafe\n"  
+            << " Đơn giá: 5$\n"
+            << " Số lượng: " << soluongd3 << '\n';
+        }
+        if (kiemtrasoluong(soluongd4)) {
+            std::cout << " Voka\n" 
+            << " Đơn giá: 2.6$\n"
+            << " Số lượng: " << soluongd4 << '\n';
+        }
+    }
+    // in hóa đơn combo
+    bool kiemtracombo = (soluongc1 > 0 || soluongc2 > 0 || soluongc3 > 0 || soluongc4 > 0);
+    if (kiemtracombo) {
+        std::cout << " Combo bạn đã chọn là: \n";
+    }
 }
 

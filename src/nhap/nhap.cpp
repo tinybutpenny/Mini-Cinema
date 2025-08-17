@@ -154,7 +154,7 @@ std::string nhapgiochieu(std::string maphim) {
 // kiểm tra nhập ghế đúng
 bool kiemtranhapghe(std::string ghe) {
     for (char &kitu : ghe) {
-        if (kitu == ' ') {
+        if (kitu == ' ') {   
             return true; 
         }
     }
