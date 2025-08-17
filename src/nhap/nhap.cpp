@@ -337,8 +337,11 @@ void choncombo() {
 // nhâp thông tin
 void nhap() {
     ten = nhapten();
+    std::cout << " Đã nhập tên: " << ten << '\n';
     phim = nhapphim();
+    std::cout << " Đã nhập mã phim: " << phim << '\n';
     gio = nhapgiochieu(phim);
+    std::cout << " Dẫ nhập giờ chiếu: " << gio << '\n';
     nhapghe();
 
     // Chọn đồ dùng
