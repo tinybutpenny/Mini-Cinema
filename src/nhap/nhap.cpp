@@ -28,7 +28,7 @@ std::string nhapten() {
             donrac();
             continue;
         } else {
-            donrac();
+            //donrac();
             return nhapten;
         }
     }
@@ -61,7 +61,7 @@ std::string nhapphim() {
             std::cout << " Phim bạn chọn đã hết ghế\n" " Vui lòng chọn phim khác" << std::endl;
             continue;
         } else { 
-            donrac();
+            //donrac();
             return maphim;
         }
     }
@@ -113,12 +113,12 @@ std::string nhapgiochieu(std::string maphim) {
                 if (kiemtragiochieu(maphim, giochieu)) {
                     std::cout << " Giờ phim bạn chọn đã hết ghế\n" " Vui lòng chọn giờ xem khác" << std::endl;
                 } else {
-                    donrac();
+                    //donrac();
                     return giochieu;
                 }
             } else {
                 std::cout<< " Không tìm thấy giờ chiếu phù hợp" "\n" " Vui lòng chọn lại" << std::endl;
-                donrac();
+                //donrac();
                 continue;
                 
             } 
@@ -127,12 +127,12 @@ std::string nhapgiochieu(std::string maphim) {
                 if (kiemtragiochieu(maphim, giochieu)) {
                     std::cout << " Giờ phim bạn chọn đã hết ghế\n" " Vui lòng chọn giờ xem khác" << std::endl;
                 } else {
-                    donrac();
+                    //donrac();
                     return giochieu;
                 }
             } else {
                 std::cout << " Không tìm thấy giờ chiếu phù hợp" "\n" " Vui lòng chọn lại" << std::endl;
-                donrac();
+                //donrac();
                 continue;
             }
         } else if (maphim == "P3") {
@@ -140,12 +140,12 @@ std::string nhapgiochieu(std::string maphim) {
                 if (kiemtragiochieu(maphim, giochieu)) {
                     std::cout << " Giờ phim bạn chọn đã hết ghế\n" " Vui lòng chọn giờ xem khác" << std::endl;
                 } else {
-                    donrac();
+                    //donrac();
                     return giochieu;
                 }
             } else {
                 std::cout << " Không tìm thấy giờ chiếu phù hợp" "\n" " Vui lòng chọn lại" << std::endl;
-                donrac();
+                //donrac();
                 continue;
             }
         }
@@ -258,7 +258,7 @@ void chondoan() {
             continue;
         } 
         else {
-            donrac();
+            //donrac();
             nhapsoluongdoan(madoan);
             return;
         }
@@ -294,7 +294,7 @@ void chondouong() {
             donrac();
             continue;
         } else {
-            donrac();
+            //donrac();
             nhapsoluongdouong(madouong);
             return;
         }
@@ -328,7 +328,7 @@ void choncombo() {
             donrac();
             continue;
         } else {
-            donrac();
+            //donrac();
             nhapsoluongcombo(macombo);
             return;
         }
