@@ -321,6 +321,7 @@ void p() {
 }
 // in ra hóa đơn tiền
 void inhoadon() {
+    std::cout << ten << '\n' ;
     std::cout << "Phim bạn đã chọn là:\n";
 
     if (phim == "p1") {

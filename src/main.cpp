@@ -9,6 +9,7 @@ int main() {
         nhap();
         inhoadon();
         std::cout << " Bạn có muốn đặt tiếp không (y/n)" << std::endl;
+        reset();
         tieptuc = chonthoat();
     } while (tieptuc == 'y');
     std::cout << " Tạm biệt" "\n" 
