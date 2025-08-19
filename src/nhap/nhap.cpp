@@ -184,7 +184,7 @@ void nhapghe() {
             std::cin.clear();
             //donrac();
             continue;
-        } else if (kiemtraghetrong(ghe)) { // hàm từ file chung
+        } else if (!kiemtraghetrong(ghe)) { // hàm từ file chung
             std::cout << " Ghế của bạn đã được chọn rồi\n" " Vui lòng chọn ghế khác" << std::endl;
             continue;
         } else {
@@ -227,6 +227,7 @@ void nhapghe() {
         }
         std::cout << " Bạn có muốn chọn thêm ghế không y/n" << std::endl;
         char tieptuc = chonthoat();
+        std::cin.ignore(1,'\n');
         if (tieptuc == 'y') {
             std::cout << " Mời bạn nhập ghế tiếp theo" << std::endl;
             continue;
