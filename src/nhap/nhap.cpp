@@ -25,7 +25,7 @@ std::string nhapten() {
         if(std::cin.fail()) {
             std::cout << " Nhập lỗi" "\n" " Vui lòng nhập lại" << std::endl;
             std::cin.clear();
-            donrac();
+            //donrac();
             continue;
         } else {
             //donrac();
@@ -55,7 +55,7 @@ std::string nhapphim() {
         if (std::cin.fail() || !kiemtra) {
             std::cout << " Không tìm thấy mã phim phù hợp" "\n" " Vui lòng chọn lại" << std::endl;
             std::cin.clear();
-            donrac();
+            //donrac();
             continue;
         } else if (kiemtraphim(maphim)) {
             std::cout << " Phim bạn chọn đã hết ghế\n" " Vui lòng chọn phim khác" << std::endl;
@@ -105,7 +105,7 @@ std::string nhapgiochieu(std::string maphim) {
         if (std::cin.fail()) {
             std::cout << " Nhập lỗi" "\n" " Vui lòng nhập lại" << std::endl;
             std::cin.clear();
-            donrac();
+            //donrac();
             continue;
         }
         if (maphim == "P1") {
@@ -158,33 +158,37 @@ bool kiemtranhapghe(std::string ghe) {
             return true; 
         }
     }
+    return false;
+}
+// số lượng ghế đã nhập 
+void soluongghe(std::string ghe) {
     std::string timkiem = " " + ghe + " ";
     if (ghedoi.find(timkiem) != std::string::npos) {
         soluongghedoi ++;
-        return false;
     } else if (ghethuong.find(timkiem) != std::string::npos) {
         soluongghethuong ++;
-        return false;
     } else if (ghevip.find(timkiem) != std::string::npos) {
         soluongghevip ++;
-        return false;
-    } else return true;
+    } 
 }
+
 // nhập ghế
 void nhapghe() {
-    std::string ghe;
+    std::string ghenhap;
     std::cout << " Mời bạn chọn ghế" << std::endl;
     while (true) {
-        std::getline(std::cin,ghe);
+        std::getline(std::cin,ghenhap);
+        std::string ghe = kituhoa(ghenhap);
         if (kiemtranhapghe(ghe) || std::cin.fail()) {
             std::cout << " Không tìm thấy ghế hợp lê\n" " Vui lòng chọn lại" << std::endl; 
             std::cin.clear();
-            donrac();
+            //donrac();
             continue;
         } else if (kiemtraghetrong(ghe)) { // hàm từ file chung
             std::cout << " Ghế của bạn đã được chọn rồi\n" " Vui lòng chọn ghế khác" << std::endl;
             continue;
         } else {
+            soluongghe(ghe);
             std::string fomat = " "  + ghe + " ";
             if (phim == "P1") {
                 if (gio == "7h") {
@@ -254,7 +258,7 @@ void chondoan() {
         if (std::cin.fail() || !chonhople) {
             std::cout << " Không tìm thấy mã đồ ăn phù hợp \n" " Vui lòng chọn lại" <<std::endl;
             std::cin.clear();
-            donrac();
+            //donrac();
             continue;
         } 
         else {
@@ -291,7 +295,7 @@ void chondouong() {
         if (std::cin.fail() || !chonhople) {
             std::cout << " Không tìm thấy mã đồ uống phù hợp \n" " Vui lòng chọn lại" << std::endl;
             std::cin.clear();
-            donrac();
+            //donrac();
             continue;
         } else {
             //donrac();
@@ -325,7 +329,7 @@ void choncombo() {
         if (std::cin.fail() || !chonhople) {
             std::cout << " Không tìm thấy mã combo phù hợp \n" " Vui lòng chọn lại" << std::endl;
             std::cin.clear();
-            donrac();
+            //donrac();
             continue;
         } else {
             //donrac();

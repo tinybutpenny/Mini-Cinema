@@ -8,6 +8,7 @@ bool kiemtragiochieu(std::string maphim, std::string giochieu);
 std::string nhapphim();
 std::string nhapgiochieu(std::string maphim);
 bool kiemtranhapghe(std::string ghe);
+void soluongghe(std::string ghe);
 void nhapghe();
 void nhapsoluongdoan(std::string madoan);
 void chondoan();
