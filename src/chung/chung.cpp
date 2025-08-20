@@ -27,9 +27,10 @@ int soluongd1 = 0, soluongd2 = 0, soluongd3 = 0, soluongd4 = 0, soluongd5 = 0;
 int soluongc1 = 0, soluongc2 = 0, soluongc3 = 0, soluongc4 = 0;
 // dọn kí tự thừa
 void donrac() { 
-    if (std::cin.peek() != '\n' && std::cin.peek() != EOF) { // kiểm tra nếu buffet không bằng \n thì dọn và tránh eof khi bufet rỗng
+    std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
+    /*if (std::cin.peek() != '\n' && std::cin.peek() != EOF) { // kiểm tra nếu buffet không bằng \n thì dọn và tránh eof khi bufet rỗng
         std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
-    }
+    }*/
 }
 // chuyển kí tự thường sang hoa
 std::string kituhoa(std::string a) { 

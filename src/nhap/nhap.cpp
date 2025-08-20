@@ -227,7 +227,6 @@ void nhapghe() {
         }
         std::cout << " Bạn có muốn chọn thêm ghế không y/n" << std::endl;
         char tieptuc = chonthoat();
-        std::cin.ignore(1,'\n');
         if (tieptuc == 'y') {
             std::cout << " Mời bạn nhập ghế tiếp theo" << std::endl;
             continue;
@@ -330,10 +329,9 @@ void choncombo() {
         if (std::cin.fail() || !chonhople) {
             std::cout << " Không tìm thấy mã combo phù hợp \n" " Vui lòng chọn lại" << std::endl;
             std::cin.clear();
-            //donrac();
+            donrac();
             continue;
         } else {
-            //donrac();
             nhapsoluongcombo(macombo);
             return;
         }
@@ -366,22 +364,26 @@ void nhap() {
             } 
             switch (chucnang) {
                 case 1: {
+                    donrac();
                     chondoan();
                     continue;
                 }
 
                 case 2: {
+                    donrac();
                     chondouong();
                     continue;
                 }
 
                 case 3: {
+                    donrac();
                     choncombo();
                     continue;
                 }
 
                 case 4: {
                     char thoat = chonthoat();
+                    std::cout << " Bạn muốn thoát chứ (y/n)\n";
                     if (thoat == 'y') {
                         std::cout << " Đã thoát" << std::endl;
                         return;

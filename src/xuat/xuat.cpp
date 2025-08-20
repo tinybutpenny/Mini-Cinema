@@ -324,15 +324,15 @@ void inhoadon() {
     std::cout << ten << '\n' ;
     std::cout << "Phim bạn đã chọn là:\n";
 
-    if (phim == "p1") {
+    if (phim == "P1") {
         std::cout << "Taylor Swift Era\n";
         std::cout << "Giờ chiếu là: " << gio << std::endl;
         p();
-    } else if (phim == "p2") {
+    } else if (phim == "P2") {
         std::cout << "Avengers\n";
         std::cout << "Giờ chiếu là: " << gio << std::endl;
         p();
-    } else if (phim == "p3") {
+    } else if (phim == "P3") {
         std::cout << "Spiderman\n";
         std::cout << "Giờ chiếu là: " << gio << std::endl;
         p();
