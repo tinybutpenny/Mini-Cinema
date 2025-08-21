@@ -236,13 +236,21 @@ void nhapghe() {
 // nhập số lượng đồ ăn
 void nhapsoluongdoan(std::string madoan) {
     if (madoan == "F1") {
-        soluongf1 = nhapsoluong();
+        if (soluongf1 > 0) {
+            soluongf1 += nhapsoluong();
+        } else {soluongf1 = nhapsoluong();}
     } else if (madoan == "F2") {
-        soluongf2 = nhapsoluong();
+        if (soluongf2 > 0) {
+            soluongf2 += nhapsoluong();
+        } else {soluongf2 = nhapsoluong();}
     } else if (madoan == "F3") {
-        soluongf3 = nhapsoluong();
+        if (soluongf3 > 0) {
+            soluongf3 += nhapsoluong();
+        } else {soluongf3 = nhapsoluong();}
     } else {
-        soluongf4 = nhapsoluong();
+        if (soluongf4 > 0) {
+            soluongf4 += nhapsoluong();
+        } else {soluongf4 = nhapsoluong();}
     }
     return;
 }
@@ -271,15 +279,25 @@ void chondoan() {
 // nhập só lượng đồ uống
 void nhapsoluongdouong(std::string madouong) {
     if (madouong == "D1") {
-        soluongd1 = nhapsoluong();
+        if (soluongd1 > 0) {
+            soluongd1 += nhapsoluong();
+        } else {soluongd1 = nhapsoluong();}
     } else if (madouong == "D2") {
-        soluongd2 = nhapsoluong();
+        if (soluongd2 > 0) {
+            soluongd2 += nhapsoluong();
+        } else {soluongd2 = nhapsoluong();}
     } else if (madouong == "D3") {
-        soluongd3 = nhapsoluong();
+        if (soluongd3 > 0) {
+            soluongd3 += nhapsoluong();
+        } else {soluongd3 = nhapsoluong();}
     } else if (madouong == "D4") {
-        soluongd4 = nhapsoluong();
+        if (soluongd4 > 0) {
+            soluongd4 += nhapsoluong();
+        } else {soluongd4 = nhapsoluong();}
     } else {
-        soluongd5 = nhapsoluong();
+        if (soluongd5 > 0) {
+            soluongd5 += nhapsoluong();
+        } else {soluongd5 = nhapsoluong();}
     }
     return;
 }
@@ -307,13 +325,21 @@ void chondouong() {
 // nhập số lượng combo
 void nhapsoluongcombo(std::string macombo) {
     if (macombo == "C1") {
-        soluongc1 = nhapsoluong();
+        if (soluongc1 > 0) {
+            soluongc1 += nhapsoluong();
+        } else {soluongc1 = nhapsoluong();}
     } else if (macombo == "C2") {
-        soluongc2 = nhapsoluong();
+        if (soluongc2 > 0) {
+            soluongc2 += nhapsoluong();
+        } else {soluongc2 = nhapsoluong();}
     } else if (macombo == "C3") {
-        soluongc3 = nhapsoluong();
+        if (soluongc3 > 0) {
+            soluongc3 += nhapsoluong();
+        } else {soluongc3 = nhapsoluong();}
     } else {
-        soluongc4 = nhapsoluong();
+        if (soluongc4 > 0) {
+            soluongc4 += nhapsoluong();
+        } else {soluongc4 = nhapsoluong();}
     }
     return;
 }
