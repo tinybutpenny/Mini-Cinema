@@ -420,7 +420,7 @@ void nhap() {
     else if (phim == "P2") {std::cout << " Avengers\n";}
     else if (phim == "P3") {std::cout << " Spiderman\n";}
     gio = nhapgiochieu(phim);
-    std::cout << " Dẫ nhập giờ chiếu: " << gio << '\n';
+    std::cout << " Đã nhập giờ chiếu: " << gio << '\n';
     nhapghe();
     // Chọn đồ dùng
     std::cout << " Bạn muốn chọn đồ dùng chứ (y/n)" << std::endl;
