@@ -1,6 +1,8 @@
 # 🎬 Mini-Cinema (C++ Console App)
 
-**Console-based cinema booking system written in pure C++.**
+**Simple logic. Real thinking.**
+
+*Hi, I'm Penny — welcome to my simple C++ Mini-Cinema.*
 
 ---
 
@@ -135,7 +137,13 @@ Total: $40.86
 
 ## ✨ Author
 
-**DUONG VAN THANG** aka **Penny**
+### 👑 **DUONG VAN THANG** aka **Penny**
+
+🛠️ Embedded Dev | PCB Designer | C/C++ Enthusiast  
+⚡ Industrial Automation & PLC (Siemens)
+🔥 *"I may not write elegant code, but it works. Every damn time."*
+
+---
 
 [![GitHub](https://img.shields.io/badge/GitHub-tinybutpenny-black?style=for-the-badge\&logo=github)](https://github.com/tinybutpenny)
 
