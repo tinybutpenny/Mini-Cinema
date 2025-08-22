@@ -8,8 +8,8 @@ bool kiemtrasoluong(int soluong) {
     } else { return false;}
 } 
 // tính tiền ghế
-float tienghe() {
-    float sotien = 0;
+double tienghe() {
+    double sotien = 0;
     if (phim == "P1") {
         if (gio == "7h") {
             if (kiemtrasoluong(soluongghethuong)) {
@@ -121,8 +121,8 @@ float tienghe() {
     } else return sotien;
 }
 // tính tiền đồ ăn
-float tiendoan() {
-    float sotien = 0;
+double tiendoan() {
+    double sotien = 0;
     if (kiemtrasoluong(soluongf1)) {
         sotien += soluongf1 * 3.4;
     }
@@ -138,8 +138,8 @@ float tiendoan() {
     return sotien;
 }
 // tính tiền đồ uống
-float tiendouong() {
-    float sotien = 0;
+double tiendouong() {
+    double sotien = 0;
     if (kiemtrasoluong(soluongd1)) {
         sotien += soluongd1 * 4.4;
     }
@@ -159,8 +159,8 @@ float tiendouong() {
 
 }
 // tính tiền combo
-float tiencombo() {
-    float sotien = 0;
+double tiencombo() {
+    double sotien = 0;
     if (kiemtrasoluong(soluongc1)) {
         sotien += soluongc1 * 4.9;
     }
@@ -176,8 +176,8 @@ float tiencombo() {
     return sotien;
 }
 // tính tổng số tiền 
-float tongtienhoadon() {
-    float tongtien = 0;
+double tongtienhoadon() {
+    double tongtien = 0;
     tongtien += tienghe();
     tongtien += tiendoan();
     tongtien += tiencombo();
@@ -192,7 +192,7 @@ void inmenu() {
     incombo();
 }
 // hàm in giá tiền ghế 
-float ingiaghe(char a) {
+double ingiaghe(char a) {
     if (phim == "P1") {
         if (gio == "7h") {
             if (a == 'T') {
@@ -300,6 +300,7 @@ float ingiaghe(char a) {
             }
         }
     }
+    return 0.0;
 }
 // in phim 
 void p() {
@@ -421,7 +422,7 @@ void inhoadon() {
             << " Số lượng: " << soluongc4 << '\n';
         }
     }
-    float sotienphaitra = tongtienhoadon();
+    double sotienphaitra = tongtienhoadon();
     // khuyến mại ghế đôi
     bool khuyenmaighedoi = true;
     if (soluongghedoi > 0 && khuyenmaighedoi) {

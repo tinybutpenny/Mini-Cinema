@@ -2,13 +2,13 @@
 #include "chung.h"
 #include "nhap.h"
 bool kiemtrasoluong(int soluong);
-float tienghe();
-float tiendoan();
-float tiendouong();
-float tiencombo();
-float tongtienhoadon();
+double tienghe();
+double tiendoan();
+double tiendouong();
+double tiencombo();
+double tongtienhoadon();
 void inmenu();
-float ingiaghe(char a);
+double ingiaghe(char a);
 void p();
 void inhoadon();
 void reset();
