@@ -178,9 +178,9 @@ void nhapghe() {
         std::getline(std::cin,ghenhap);
         std::string ghe = kituhoa(ghenhap);
         if (kiemtranhapghe(ghe) || std::cin.fail()) {
-            std::cout << " Không tìm thấy ghế hợp lê\n" " Vui lòng chọn lại" << std::endl; 
+            std::cout << " Không tìm thấy ghế hợp lệ \n" " Vui lòng chọn lại" << std::endl; 
             std::cin.clear();
-            donrac();
+            //donrac();
             continue;
         } else if (!kiemtraghetrong(ghe)) { // hàm từ file chung
             std::cout << " Ghế của bạn đã được chọn rồi\n" " Vui lòng chọn ghế khác" << std::endl;
@@ -275,7 +275,7 @@ void chondoan() {
         if (std::cin.fail() || !chonhople) {
             std::cout << " Không tìm thấy mã đồ ăn phù hợp \n" " Vui lòng chọn lại" <<std::endl;
             std::cin.clear();
-            donrac();
+            //donrac();
             continue;
         } 
         else {
@@ -397,7 +397,7 @@ void choncombo() {
         if (std::cin.fail() || !chonhople) {
             std::cout << " Không tìm thấy mã combo phù hợp \n" " Vui lòng chọn lại" << std::endl;
             std::cin.clear();
-            donrac();
+            //donrac();
             continue;
         } else {
             nhapsoluongcombo(macombo);
@@ -434,7 +434,7 @@ void nhap() {
             if (std::cin.fail() || !chondung) {
                 std::cout << " Chọn lỗi\n" " Vui lòng chọn lại (chỉ chọn 1,2,3,4)" << std::endl;
                 std::cin.clear();
-                donrac();
+                //donrac();
                 continue;
             } 
             switch (chucnang) {

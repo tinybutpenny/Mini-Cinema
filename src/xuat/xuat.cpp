@@ -6,19 +6,6 @@ bool kiemtrasoluong(int soluong) {
     if (soluong != 0) {
         return true;
     } else { return false;}
-}
-// khuyến mại đối với ghế AA
-int khuyenmai() {
-    int a = 0;
-    std::string ghe = " AA "; // ghế được khuyến mại
-    bool kiemtra = (
-        ghep1_7h.find(ghe)  != std::string::npos || ghep1_14h.find(ghe) != std::string::npos || ghep1_22h.find(ghe) != std::string::npos || 
-        ghep2_10h.find(ghe) != std::string::npos || ghep2_12h.find(ghe) != std::string::npos || ghep2_14h.find(ghe) != std::string::npos ||
-        ghep3_20h.find(ghe) != std::string::npos || ghep3_23h.find(ghe) != std::string::npos || ghep3_1h.find (ghe) != std::string::npos);
-    if (!kiemtra) {
-        std::cout << " Bạn nhận được khuyến mại ghế vàng\n" " Giảm tiền ghế 10%\n";
-        return a;
-    } else {a = 1;return a;}
 } 
 // tính tiền ghế
 float tienghe() {
@@ -126,12 +113,12 @@ float tienghe() {
 
         }
     }
-    int a = khuyenmai();
-    if (a = 1) {
-        sotien -= sotien *0.1;
-        return sotien;
-    }
-    return sotien;
+    std::string ghe = " AA "; // ghế được khuyến mại
+    bool khuyenmaighevang = true;
+    if(ghethuong.find(ghe) != std::string::npos && khuyenmaighevang) {
+        std::cout << " Bạn nhận được khuyến mại giảm 10% cho tiền ghế vì chọn ghế vàng\n";
+        return sotien -= sotien*0.1;
+    } else return sotien;
 }
 // tính tiền đồ ăn
 float tiendoan() {
@@ -211,7 +198,7 @@ float ingiaghe(char a) {
             if (a == 'T') {
                 return 20;
             }
-            if (a == 'Đ') {
+            if (a == 'D') {
                 return 30.5;
             }
             if (a == 'V') {
@@ -222,7 +209,7 @@ float ingiaghe(char a) {
             if (a == 'T') {
                 return 18;
             }
-            if (a == 'Đ') {
+            if (a == 'D') {
                 return 48.7;
             }
             if (a == 'V') {
@@ -233,7 +220,7 @@ float ingiaghe(char a) {
             if (a == 'T') {
                 return 45.5;
             }
-            if (a == 'Đ') {
+            if (a == 'D') {
                 return 21;
             } 
             if (a == 'V') {
@@ -248,18 +235,18 @@ float ingiaghe(char a) {
             }
         }
         if (gio == "12h") {
-            if (a == 'Đ') {
+            if (a == 'D') {
                 return 31.5;
             }
             if (a == 'V') {
                 return 52;
             }
         } 
-        if (gio == "14h") {
+        if (gio == "12h") {
             if (a == 'T') {
                 return 19;
             }
-            if (a == 'Đ') {
+            if (a == 'D') {
                 return 49.7;
             }
             if (a == 'V') {
@@ -270,7 +257,7 @@ float ingiaghe(char a) {
             if (a == 'T') {
                 return 46.5;
             }
-            if (a == 'Đ') {
+            if (a == 'D') {
                 return 22;
             }
             if (a == 'V') {
@@ -283,7 +270,7 @@ float ingiaghe(char a) {
             if (a == 'T') {
                 return 22;
             }
-            if (a == 'Đ') {
+            if (a == 'D') {
                 return 32.5;
             }
             if (a == 'V') {
@@ -294,7 +281,7 @@ float ingiaghe(char a) {
             if (a == 'T') {
                 return 20;
             }
-            if (a == 'Đ') {
+            if (a == 'D') {
                 return 50.7;
             }
             if (a == 'V') {
@@ -305,7 +292,7 @@ float ingiaghe(char a) {
             if (a == 'T') {
                 return 47.5;
             } 
-            if (a == 'Đ') {
+            if (a == 'D') {
                 return 23;
             }
             if (a == 'V') {
@@ -323,19 +310,18 @@ void p() {
         << " Các ghế là: " << ghedachonthuong << '\n'
         << " Giá: " << ingiaghe('T') << "$\n";
     }
-    if (soluongghevip != 0) {
-        std::cout << " Ghế Vip:\n"
-        << " Số ghế là: " << soluongghevip << '\n'
-        << " Các ghế là: " << ghedachonvip << '\n'
-        << " Giá: " << ingiaghe('V') << "$\n";
-    }
     if (soluongghedoi != 0) {
         std::cout << " Ghế Đôi:\n"
         << " Số ghế là: " << soluongghedoi << '\n'
         << " Các ghế là: " << ghedachondoi << '\n'
-        << " Giá: " << ingiaghe('Đ') << "$ \n";
+        << " Giá: " << ingiaghe('D') << "$\n";
     }
-
+    if (soluongghevip != 0) {
+        std::cout << " Ghế Vip:\n"
+        << " Số ghế là: " << soluongghevip << '\n'
+        << " Các ghế là: " << ghedachonvip << '\n'
+        << " Giá: " << ingiaghe('V') << "$ \n";
+    }
 }
 // in ra hóa đơn tiền
 void inhoadon() {
@@ -437,18 +423,21 @@ void inhoadon() {
     }
     float sotienphaitra = tongtienhoadon();
     // khuyến mại ghế đôi
-    if (soluongghedoi > 0) {
+    bool khuyenmaighedoi = true;
+    if (soluongghedoi > 0 && khuyenmaighedoi) {
         soluongc1 += soluongghedoi;
-        std::cout << " Bạn nhận được khuyến mại của ghế đôi\n" " Combo1 +" << soluongghedoi <<  " \nSố lượng: " << soluongc1 << '\n';
+        std::cout << " Bạn nhận được khuyến mại của ghế đôi\n" " Combo1 +" << soluongghedoi <<  " \n Số lượng: " << soluongc1 << '\n';
     }
     // khuyến mại thêm bắp ngọt khi tổng tiền lớn hơn 100$
-    if (sotienphaitra >= 100) {
+    bool khuyenmaitongtien = true;
+    if (sotienphaitra >= 100 && khuyenmaitongtien) {
         soluongf1 += 2;
         std::cout << " Bạn nhận được khuyến mại khi chi tiêu hơn 100$\n" " Bắp ngọt +2\n" " Số lượng: " << soluongf1 << '\n' ;
     }
     // hàm khuyến mại cho fan Swiftie
-    if (phim == "P1") {
-        std::cout << " Bạn nhận được khuyến mại giảm giá 10% của fan swiftie\n ";
+    bool fanSwiftie = true;
+    if (phim == "P1" && fanSwiftie) {
+        std::cout << " Bạn nhận được khuyến mại giảm giá 10% tổng số tiền của fan swiftie\n ";
         sotienphaitra -= sotienphaitra * 0.1;
         std::cout << " Số tiền bạn phải trả là: " << sotienphaitra << "$" << std::endl;
     } else {std::cout << " Số tiền bạn phải trả là: " << sotienphaitra << "$" << std::endl;}
