@@ -2,6 +2,7 @@
 #include "chung.h"
 #include "nhap.h"
 bool kiemtrasoluong(int soluong);
+int khuyenmai();
 float tienghe();
 float tiendoan();
 float tiendouong();

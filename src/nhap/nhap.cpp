@@ -132,7 +132,6 @@ std::string nhapgiochieu(std::string maphim) {
                 }
             } else {
                 std::cout << " Không tìm thấy giờ chiếu phù hợp" "\n" " Vui lòng chọn lại" << std::endl;
-                //donrac();
                 continue;
             }
         } else if (maphim == "P3") {
@@ -140,12 +139,10 @@ std::string nhapgiochieu(std::string maphim) {
                 if (kiemtragiochieu(maphim, giochieu)) {
                     std::cout << " Giờ phim bạn chọn đã hết ghế\n" " Vui lòng chọn giờ xem khác" << std::endl;
                 } else {
-                    //donrac();
                     return giochieu;
                 }
             } else {
                 std::cout << " Không tìm thấy giờ chiếu phù hợp" "\n" " Vui lòng chọn lại" << std::endl;
-                //donrac();
                 continue;
             }
         }
@@ -157,8 +154,9 @@ bool kiemtranhapghe(std::string ghe) {
         if (kitu == ' ') {   
             return true; 
         }
-    }
-    return false;
+    } 
+    std::string fomat = " " + ghe + " ";
+    return ghedangco.find(fomat) == std::string::npos;
 }
 // số lượng ghế đã nhập 
 void soluongghe(std::string ghe) {
@@ -182,7 +180,7 @@ void nhapghe() {
         if (kiemtranhapghe(ghe) || std::cin.fail()) {
             std::cout << " Không tìm thấy ghế hợp lê\n" " Vui lòng chọn lại" << std::endl; 
             std::cin.clear();
-            //donrac();
+            donrac();
             continue;
         } else if (!kiemtraghetrong(ghe)) { // hàm từ file chung
             std::cout << " Ghế của bạn đã được chọn rồi\n" " Vui lòng chọn ghế khác" << std::endl;
@@ -259,9 +257,9 @@ void nhapsoluongdoan(std::string madoan) {
 void chondoan() {
     bool kiemtra = (soluongf1 > 0 || soluongf2 > 0 || soluongf3 > 0 || soluongf4 > 0);
     if (kiemtra) {
-        std::cout << " Bạn đã chọn đồ ăn rồi\n" " Bạn muốn chọn tiếp chứ y/n";
+        std::cout << " Bạn đã chọn đồ ăn rồi\n" " Bạn muốn chọn tiếp chứ y/n\n";
         char thoat = chonthoat();
-        if (thoat == 'Y') {
+        if (thoat == 'y') {
             std::cout << " Đã chọn tiếp\n";
         } else {
             std::cout << " Đã thoát chọn đồ ăn\n";
@@ -277,12 +275,17 @@ void chondoan() {
         if (std::cin.fail() || !chonhople) {
             std::cout << " Không tìm thấy mã đồ ăn phù hợp \n" " Vui lòng chọn lại" <<std::endl;
             std::cin.clear();
-            //donrac();
+            donrac();
             continue;
         } 
         else {
             //donrac();
             nhapsoluongdoan(madoan);
+            std::cout << " Đã chọn đồ ăn: \n";
+            if (madoan == "F1") {std::cout << " Bắp mặn\n" " Số lượng: " << soluongf1 << '\n';}
+            if (madoan == "F2") {std::cout << " Bắp ngọt\n" " Số lượng: " << soluongf2 << '\n';}
+            if (madoan == "F3") {std::cout << " Bắp phô mai\n" " Số lượng: " << soluongf3 << '\n';}
+            if (madoan == "F4") {std::cout << " Bắp mix vị\n" " Số lượng: " << soluongf4 << '\n';}
             return;
         }
     }
@@ -316,9 +319,9 @@ void nhapsoluongdouong(std::string madouong) {
 void chondouong() {
     bool kiemtra = (soluongd1 > 0 || soluongd2 > 0 || soluongd3 > 0 || soluongd4 > 0 || soluongd5 > 0);
     if (kiemtra) {
-        std::cout << " Bạn đã chọn đồ uống rồi. \n" " Bạn muốn chọn tiếp chứ y/n";
+        std::cout << " Bạn đã chọn đồ uống rồi. \n" " Bạn muốn chọn tiếp chứ y/n\n";
         char thoat = chonthoat();
-        if (thoat == 'Y') {
+        if (thoat == 'y') {
             std::cout << " Đã chọn tiếp\n";
         } else {
             std::cout << " Đã thoát chọn đồ uống \n"; 
@@ -340,6 +343,12 @@ void chondouong() {
         } else {
             //donrac();
             nhapsoluongdouong(madouong);
+            std::cout << " Đã chọn đồ uống: \n";
+            if (madouong == "D1") {std::cout << " Coca\n" " Số lượng: " << soluongd1 << '\n';}
+            if (madouong == "D2") {std::cout << " Pepsi\n" " Số lượng: " << soluongd2 << '\n';}
+            if (madouong == "D3") {std::cout << " Cafe\n" " Số lượng: " << soluongd3 << '\n';} 
+            if (madouong == "D4") {std::cout << " Voka\n" " Số lượng: " << soluongd4 << '\n';}
+            if (madouong == "D5") {std::cout << " Trà sữa\n" " Số lượng: " << soluongd5 << '\n';}
             return;
         }
     }
@@ -369,9 +378,9 @@ void nhapsoluongcombo(std::string macombo) {
 void choncombo() {
     bool kiemtra = (soluongc1 > 0 || soluongc2 > 0 || soluongc3 > 0 || soluongc4 > 0);
     if (kiemtra) {
-        std::cout << " Bạn đã chọn combo rồi bạn muốn chọn tiếp chứ y/n\n";
+        std::cout << " Bạn đã chọn combo rồi\n" " Bạn muốn chọn tiếp chứ y/n\n";
         char thoat = chonthoat();
-        if (thoat == 'Y') {
+        if (thoat == 'y') {
             std::cout << " Đã tiếp tục chọn\n";
         } else {
             std::cout << " Đã thoát\n";
@@ -392,6 +401,11 @@ void choncombo() {
             continue;
         } else {
             nhapsoluongcombo(macombo);
+            std::cout << " Combo bạn đã chọn là: \n";
+            if (macombo == "C1") {std::cout << " Combo 1\n" " Số lượng: " << soluongc1 << '\n';}
+            if (macombo == "C2") {std::cout << " Combo 2\n" " Số lượng: " << soluongc2 << '\n';}
+            if (macombo == "C3") {std::cout << " Combo 3\n" " Số lượng: " << soluongc3 << '\n';}
+            if (macombo == "C4") {std::cout << " Combo 4\n" " Số lượng: " << soluongc4 << '\n';}
             return;
         }
     }
@@ -402,9 +416,9 @@ void nhap() {
     std::cout << " Đã nhập tên: " << ten << '\n';
     phim = nhapphim();
     std::cout << " Đã nhập mã phim: \n";
-    if (phim == "P1") {std::cout << "Taylor Swift Era\n";}
-    else if (phim == "P2") {std::cout << "Avengers\n";}
-    else if (phim == "P3") {std::cout << "Spiderman\n";}
+    if (phim == "P1") {std::cout << " Taylor Swift Era\n";}
+    else if (phim == "P2") {std::cout << " Avengers\n";}
+    else if (phim == "P3") {std::cout << " Spiderman\n";}
     gio = nhapgiochieu(phim);
     std::cout << " Dẫ nhập giờ chiếu: " << gio << '\n';
     nhapghe();
@@ -443,8 +457,8 @@ void nhap() {
                 }
 
                 case 4: {
-                    char thoat = chonthoat();
                     std::cout << " Bạn muốn thoát chứ (y/n)\n";
+                    char thoat = chonthoat();
                     if (thoat == 'y') {
                         std::cout << " Đã thoát" << std::endl;
                         return;
