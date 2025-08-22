@@ -447,4 +447,6 @@ void reset() {
     soluongf1 = 0, soluongf2 = 0, soluongf3 = 0, soluongf4 = 0;
     soluongd1 = 0, soluongd2 = 0, soluongd3 = 0, soluongd4 = 0, soluongd5 = 0;
     soluongc1 = 0, soluongc2 = 0, soluongc3 = 0, soluongc4 = 0;
+    ghedachondoi = "", ghedachonthuong = "", ghedachonvip = "";
+
 }
