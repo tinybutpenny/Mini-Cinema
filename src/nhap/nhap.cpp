@@ -224,7 +224,8 @@ void nhapghe() {
             if (ghedoi.find(fomat) != std::string::npos) {
                 ghedachondoi += fomat;
             }
-        }
+        } 
+        std::cout << " Đã chọn ghế: " << ghe << '\n';
         std::cout << " Bạn có muốn chọn thêm ghế không y/n" << std::endl;
         char tieptuc = chonthoat();
         if (tieptuc == 'y') {
@@ -256,6 +257,16 @@ void nhapsoluongdoan(std::string madoan) {
 }
 // nhập đồ ăn
 void chondoan() {
+    bool kiemtra = (soluongf1 > 0 || soluongf2 > 0 || soluongf3 > 0 || soluongf4 > 0);
+    if (kiemtra) {
+        std::cout << " Bạn đã chọn đồ ăn rồi\n" " Bạn muốn chọn tiếp chứ y/n";
+        char thoat = chonthoat();
+        if (thoat == 'Y') {
+            std::cout << " Đã chọn tiếp\n";
+        } else {
+            std::cout << " Đã thoát chọn đồ ăn\n";
+            return; }
+    }
     indoan();
     std::cout << " Vui lòng nhập mã đồ ăn bạn muốn mua" << std::endl;
     std::string madoan;
@@ -303,6 +314,17 @@ void nhapsoluongdouong(std::string madouong) {
 }
 // nhập đồ uống
 void chondouong() {
+    bool kiemtra = (soluongd1 > 0 || soluongd2 > 0 || soluongd3 > 0 || soluongd4 > 0 || soluongd5 > 0);
+    if (kiemtra) {
+        std::cout << " Bạn đã chọn đồ uống rồi. \n" " Bạn muốn chọn tiếp chứ y/n";
+        char thoat = chonthoat();
+        if (thoat == 'Y') {
+            std::cout << " Đã chọn tiếp\n";
+        } else {
+            std::cout << " Đã thoát chọn đồ uống \n"; 
+            return;
+        }
+    } 
     indouong();
     std::cout << " Vui lòng nhập mã đồ uống mà bạn muốn mua" << std::endl;
     std::string madouong;
@@ -345,6 +367,17 @@ void nhapsoluongcombo(std::string macombo) {
 }
 // nhập combo
 void choncombo() {
+    bool kiemtra = (soluongc1 > 0 || soluongc2 > 0 || soluongc3 > 0 || soluongc4 > 0);
+    if (kiemtra) {
+        std::cout << " Bạn đã chọn combo rồi bạn muốn chọn tiếp chứ y/n\n";
+        char thoat = chonthoat();
+        if (thoat == 'Y') {
+            std::cout << " Đã tiếp tục chọn\n";
+        } else {
+            std::cout << " Đã thoát\n";
+            return;
+        }
+    }
     incombo();
     std::cout << " Vui lòng chọn mã combo mà bạn muốn mua" << std::endl;
     std::string macombo;
@@ -368,11 +401,13 @@ void nhap() {
     ten = nhapten();
     std::cout << " Đã nhập tên: " << ten << '\n';
     phim = nhapphim();
-    std::cout << " Đã nhập mã phim: " << phim << '\n';
+    std::cout << " Đã nhập mã phim: \n";
+    if (phim == "P1") {std::cout << "Taylor Swift Era\n";}
+    else if (phim == "P2") {std::cout << "Avengers\n";}
+    else if (phim == "P3") {std::cout << "Spiderman\n";}
     gio = nhapgiochieu(phim);
     std::cout << " Dẫ nhập giờ chiếu: " << gio << '\n';
     nhapghe();
-
     // Chọn đồ dùng
     std::cout << " Bạn muốn chọn đồ dùng chứ (y/n)" << std::endl;
     char chon = chonthoat();
@@ -428,5 +463,4 @@ void nhap() {
         std::cout << " Đã thoát" << std::endl;
         return;
     }
-    
 }
