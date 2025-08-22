@@ -1,7 +1,7 @@
 #include "nhap.h"
 // nhập số lượng 
 int nhapsoluong(){
-    std::cout << " Nhập số lượng mà bạn muốn mua" << std::endl;
+    std::cout << "> Nhập số lượng mà bạn muốn mua" << std::endl;
     int soluong;
     while (true) {
         std::cin >> soluong;
@@ -18,7 +18,7 @@ int nhapsoluong(){
 }
 // nhập tên
 std::string nhapten() {
-    std::cout << " Vui lòng nhập tên" << std::endl;
+    std::cout << "> Vui lòng nhập tên" << std::endl;
     std::string nhapten;
     while (true) {
         std::getline(std::cin,nhapten);
@@ -46,7 +46,7 @@ bool kiemtraphim(std::string maphim) {
 }
 // nhập phim 
 std::string nhapphim() {
-    std::cout << " Vui lòng nhập mã phim mà bạn muốn xem" << std::endl;
+    std::cout << "> Vui lòng nhập mã phim mà bạn muốn xem" << std::endl;
     std::string maphim;
     while (true) {
         std::getline(std::cin,maphim);
@@ -98,7 +98,7 @@ bool kiemtragiochieu(std::string maphim, std::string giochieu) {
 }
 // nhập giờ chiếu
 std::string nhapgiochieu(std::string maphim) {
-    std::cout << " Vui lòng chọn giờ chiếu" <<std::endl;
+    std::cout << "> Vui lòng chọn giờ chiếu" <<std::endl;
     std::string giochieu;
     while (true){
         std::getline(std::cin,giochieu);
@@ -173,7 +173,7 @@ void soluongghe(std::string ghe) {
 // nhập ghế
 void nhapghe() {
     std::string ghenhap;
-    std::cout << " Mời bạn chọn ghế" << std::endl;
+    std::cout << "> Mời bạn chọn ghế" << std::endl;
     while (true) {
         std::getline(std::cin,ghenhap);
         std::string ghe = kituhoa(ghenhap);
@@ -224,10 +224,10 @@ void nhapghe() {
             }
         } 
         std::cout << " Đã chọn ghế: " << ghe << '\n';
-        std::cout << " Bạn có muốn chọn thêm ghế không y/n" << std::endl;
+        std::cout << "> Bạn có muốn chọn thêm ghế không y/n" << std::endl;
         char tieptuc = chonthoat();
         if (tieptuc == 'y') {
-            std::cout << " Mời bạn nhập ghế tiếp theo" << std::endl;
+            std::cout << "> Mời bạn nhập ghế tiếp theo" << std::endl;
             continue;
         } else return;
     }
@@ -257,7 +257,7 @@ void nhapsoluongdoan(std::string madoan) {
 void chondoan() {
     bool kiemtra = (soluongf1 > 0 || soluongf2 > 0 || soluongf3 > 0 || soluongf4 > 0);
     if (kiemtra) {
-        std::cout << " Bạn đã chọn đồ ăn rồi\n" " Bạn muốn chọn tiếp chứ y/n\n";
+        std::cout << "> Bạn đã chọn đồ ăn rồi\n" " Bạn muốn chọn tiếp chứ y/n\n";
         char thoat = chonthoat();
         if (thoat == 'y') {
             std::cout << " Đã chọn tiếp\n";
@@ -266,7 +266,7 @@ void chondoan() {
             return; }
     }
     indoan();
-    std::cout << " Vui lòng nhập mã đồ ăn bạn muốn mua" << std::endl;
+    std::cout << "> Vui lòng nhập mã đồ ăn bạn muốn mua" << std::endl;
     std::string madoan;
     while (true) {
         std::getline(std::cin,madoan);
@@ -319,7 +319,7 @@ void nhapsoluongdouong(std::string madouong) {
 void chondouong() {
     bool kiemtra = (soluongd1 > 0 || soluongd2 > 0 || soluongd3 > 0 || soluongd4 > 0 || soluongd5 > 0);
     if (kiemtra) {
-        std::cout << " Bạn đã chọn đồ uống rồi. \n" " Bạn muốn chọn tiếp chứ y/n\n";
+        std::cout << " Bạn đã chọn đồ uống rồi. \n" "> Bạn muốn chọn tiếp chứ y/n\n";
         char thoat = chonthoat();
         if (thoat == 'y') {
             std::cout << " Đã chọn tiếp\n";
@@ -329,7 +329,7 @@ void chondouong() {
         }
     } 
     indouong();
-    std::cout << " Vui lòng nhập mã đồ uống mà bạn muốn mua" << std::endl;
+    std::cout << "> Vui lòng nhập mã đồ uống mà bạn muốn mua" << std::endl;
     std::string madouong;
     while (true) {
         std::getline(std::cin,madouong);
@@ -378,7 +378,7 @@ void nhapsoluongcombo(std::string macombo) {
 void choncombo() {
     bool kiemtra = (soluongc1 > 0 || soluongc2 > 0 || soluongc3 > 0 || soluongc4 > 0);
     if (kiemtra) {
-        std::cout << " Bạn đã chọn combo rồi\n" " Bạn muốn chọn tiếp chứ y/n\n";
+        std::cout << "> Bạn đã chọn combo rồi\n" " Bạn muốn chọn tiếp chứ y/n\n";
         char thoat = chonthoat();
         if (thoat == 'y') {
             std::cout << " Đã tiếp tục chọn\n";
@@ -388,7 +388,7 @@ void choncombo() {
         }
     }
     incombo();
-    std::cout << " Vui lòng chọn mã combo mà bạn muốn mua" << std::endl;
+    std::cout << "> Vui lòng chọn mã combo mà bạn muốn mua" << std::endl;
     std::string macombo;
     while (true) {
         std::getline(std::cin,macombo);  
@@ -423,12 +423,12 @@ void nhap() {
     std::cout << " Đã nhập giờ chiếu: " << gio << '\n';
     nhapghe();
     // Chọn đồ dùng
-    std::cout << " Bạn muốn chọn đồ dùng chứ (y/n)" << std::endl;
+    std::cout << "> Bạn muốn chọn đồ dùng chứ (y/n)" << std::endl;
     char chon = chonthoat();
     if (chon == 'y') {
         int chucnang;
         while (true) {
-            std::cout << " Vui chọn chức năng (1: đồ ăn, 2: đồ uống, 3: combo, 4: thoát)" << std::endl;
+            std::cout << "> Vui chọn chức năng (1: đồ ăn, 2: đồ uống, 3: combo, 4: thoát)" << std::endl;
             std::cin >> chucnang;
             bool chondung = (chucnang == 1 || chucnang == 2 || chucnang == 3 || chucnang == 4);
             if (std::cin.fail() || !chondung) {
@@ -457,7 +457,7 @@ void nhap() {
                 }
 
                 case 4: {
-                    std::cout << " Bạn muốn thoát chứ (y/n)\n";
+                    std::cout << "> Bạn muốn thoát chứ (y/n)\n";
                     char thoat = chonthoat();
                     if (thoat == 'y') {
                         std::cout << " Đã thoát" << std::endl;

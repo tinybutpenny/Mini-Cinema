@@ -73,22 +73,62 @@ cinema.exe # Windows
 > Enter your name:
 thang
 
+
 > Enter movie code:
 P1
 Taylor Swift Era
 
+
 > Enter showtime:
 7h
+
 
 > Choose seat:
 AA
 Selected seat: AA
 
+
+> Choose food code:
+F1
+> Enter quantity:
+2
+
+
+> Choose drink code:
+D5
+> Enter quantity:
+1
+
+
+> Choose combo code:
+C2
+> Enter quantity:
+1
+
+
 --- INVOICE ---
+Customer: thang
 Movie: Taylor Swift Era
 Showtime: 7h
 Seat: AA (Regular)
-Price: $20
+Ticket: $20.0
+
+
+Snacks:
+- F1 x2 = $6.8
+
+
+Drinks:
+- D5 x1 = $9.0
+
+
+Combos:
+- C2 x1 = $9.6
+
+
+Subtotal: $45.4
+Promotion Applied: Golden Seat (AA) ✅ -10%
+Total: $40.86
 ```
 
 ---
