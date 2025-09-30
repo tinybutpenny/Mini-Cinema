@@ -1,7 +1,7 @@
 #include "nhap.h"
 // nhập số lượng 
 int nhapsoluong(){
-    std::cout << "> Nhập số lượng mà bạn muốn mua" << std::endl;
+    std::cout << "> Nhập số lượng mà bạn muốn mua." << std::endl;
     int soluong;
     while (true) {
         std::cin >> soluong;
