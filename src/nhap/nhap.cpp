@@ -6,7 +6,7 @@ int nhapsoluong(){
     while (true) {
         std::cin >> soluong;
         if (std::cin.fail()) {
-            std::cout << " Nhập lỗi\n" " Vui lòng nhập lại" << std::endl;
+            std::cout << " Nhập lỗi\n" " Vui lòng nhập lại." << std::endl;
             std::cin.clear();
             donrac();
             continue;
