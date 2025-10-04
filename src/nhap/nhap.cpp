@@ -18,7 +18,7 @@ int nhapsoluong(){
 }
 // nhập tên
 std::string nhapten() {
-    std::cout << "> Vui lòng nhập tên" << std::endl;
+    std::cout << "> Vui lòng nhập tên." << std::endl;
     std::string nhapten;
     while (true) {
         std::getline(std::cin,nhapten);
