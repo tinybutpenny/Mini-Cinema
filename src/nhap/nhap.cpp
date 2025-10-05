@@ -23,7 +23,7 @@ std::string nhapten() {
     while (true) {
         std::getline(std::cin,nhapten);
         if(std::cin.fail()) {
-            std::cout << " Nhập lỗi" "\n" " Vui lòng nhập lại" << std::endl;
+            std::cout << " Nhập lỗi" "\n" " Vui lòng nhập lại." << std::endl;
             std::cin.clear();
             donrac();
             continue;
