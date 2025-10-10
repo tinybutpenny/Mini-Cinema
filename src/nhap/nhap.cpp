@@ -45,7 +45,7 @@ bool kiemtraphim(std::string maphim) {
 }
 // nhập phim 
 std::string nhapphim() {
-    std::cout << "> Vui lòng nhập mã phim mà bạn muốn xem" << std::endl;
+    std::cout << "> Vui lòng nhập mã phim mà bạn muốn xem." << std::endl;
     std::string maphim;
     while (true) {
         std::getline(std::cin,maphim);
