@@ -52,7 +52,7 @@ std::string nhapphim() {
         maphim = kituhoa(maphim); // đồng bộ kí tự hoa
         bool kiemtra = (maphim == "P1" || maphim == "P2" || maphim == "P3");
         if (std::cin.fail() || !kiemtra) {
-            std::cout << " Không tìm thấy mã phim phù hợp." "\n" " Vui lòng chọn lại" << std::endl;
+            std::cout << " Không tìm thấy mã phim phù hợp." "\n" " Vui lòng chọn lại." << std::endl;
             std::cin.clear();
             donrac();
             continue;
